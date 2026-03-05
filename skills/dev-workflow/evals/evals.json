@@ -1,0 +1,110 @@
+{
+  "skill_name": "dev-workflow",
+  "evals": [
+    {
+      "id": 1,
+      "name": "simple-bug-fix",
+      "prompt": "帮我修复一个bug：用户登录时如果密码为空，后端返回500错误，应该返回400错误码并提示'密码不能为空'",
+      "expected_output": "走简单需求快速通道：直接定位问题、修复代码、基础测试、交付。不应输出复杂的技术方案文档。",
+      "complexity": "simple",
+      "files": [],
+      "assertions": [
+        {
+          "name": "选择快速通道",
+          "check": "识别为简单需求并选择快速通道",
+          "type": "qualitative"
+        },
+        {
+          "name": "快速修复",
+          "check": "直接定位并修复问题，不过度设计",
+          "type": "qualitative"
+        },
+        {
+          "name": "基础测试",
+          "check": "进行语法检查和功能验证",
+          "type": "qualitative"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "complex-system-design",
+      "prompt": "帮我设计一个任务调度系统，需要支持：1）定时任务（Cron表达式）2）实时任务触发 3）任务失败重试机制 4）任务执行历史记录 5）支持并发控制。使用Python实现",
+      "expected_output": "走复杂需求完整流程：需求分析→技术设计（等待人工审查）→代码开发→全面测试→规范交付。应输出详细的技术方案设计文档。",
+      "complexity": "complex",
+      "files": [],
+      "assertions": [
+        {
+          "name": "复杂度判定",
+          "check": "正确识别为复杂需求（多模块、复杂逻辑、新系统）",
+          "type": "qualitative"
+        },
+        {
+          "name": "技术方案文档",
+          "check": "输出包含架构设计、API设计、数据模型的技术方案文档",
+          "type": "qualitative"
+        },
+        {
+          "name": "人工审查点",
+          "check": "在阶段B2后暂停，明确要求用户审查技术方案",
+          "type": "qualitative"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "medium-feature-add",
+      "prompt": "在现有的用户管理系统中，添加一个'用户等级'功能：根据用户积分自动计算等级（青铜/白银/黄金/铂金），并在用户资料页面显示。需要修改数据库表、后端API和前端展示",
+      "expected_output": "根据复杂度判定可能走完整流程。应进行需求分析、评估是否需要技术设计审查。",
+      "complexity": "medium",
+      "files": [],
+      "assertions": [
+        {
+          "name": "需求分析",
+          "check": "进行需求澄清和任务拆解",
+          "type": "qualitative"
+        },
+        {
+          "name": "复杂度评估",
+          "check": "合理评估复杂度（涉及3个模块、数据库变更、API设计）",
+          "type": "qualitative"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "quick-config-change",
+      "prompt": "把项目的日志级别从INFO改成DEBUG，方便排查问题",
+      "expected_output": "极简需求，直接执行配置修改，快速交付",
+      "complexity": "simple",
+      "files": [],
+      "assertions": [
+        {
+          "name": "快速执行",
+          "check": "识别为极简需求，直接执行不过度分析",
+          "type": "qualitative"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "api-redesign",
+      "prompt": "重构现有的订单API，将同步接口改为异步处理（接收请求→返回任务ID→后台处理→回调通知），需要保证向后兼容",
+      "expected_output": "复杂需求，需要详细的技术设计，包括异步流程设计、状态管理、向后兼容策略",
+      "complexity": "complex",
+      "files": [],
+      "assertions": [
+        {
+          "name": "技术设计",
+          "check": "输出详细的异步处理流程设计",
+          "type": "qualitative"
+        },
+        {
+          "name": "兼容性考虑",
+          "check": "考虑向后兼容方案",
+          "type": "qualitative"
+        }
+      ]
+    }
+  ]
+}
